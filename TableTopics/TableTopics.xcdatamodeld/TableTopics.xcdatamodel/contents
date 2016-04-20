@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3396" systemVersion="13A598" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CategoryName" representedClassName="Category" syncable="YES">
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Topic" representedClassName="Topic" syncable="YES">
+        <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Person" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Topic" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CategoryName" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
 </model>

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -16,11 +17,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    return YES;
+    [Parse setApplicationId:@"zAPsYqzpEh7oWXrlJl6nsHXD8eLVuQwZbRZllEOq"
+                  clientKey:@"WYSk2gKvyf8W0DRYgStWhg95LOspC7rhpJSrcECQ"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+     UITabBarController *tabBarController = (UITabBarController *) self.window.rootViewController;
+    
+    [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"selected_tab_bar.png"]];
+    
+    [[tabBarController tabBar] setSelectionIndicatorImage:[UIImage imageNamed:@"selected_tab_bar.png"]];
+   
+    
+      return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
